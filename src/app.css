@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-dark-blue: #003552;
+	--color-black: #1E1E1E;
+	--color-grey: #999997;
+	--color-grey-10: #F5F5F5;
+	--color-off-white: #F6F6F6;
+	--color-beige-10: #EDEBE0;
+	--color-beige: #DCD8C1;
+	--color-green: #3C6E55;
+	--color-blue-60: #019EEB;
+
+	--font-family-heading: 'ABC Repro', serif;
+	--font-family-body: 'Instrument Sans', sans-serif;
+	--font-family-footer: 'Zilla Slab', serif;
+}

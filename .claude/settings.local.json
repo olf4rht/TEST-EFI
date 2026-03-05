@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh auth status 2>&1)",
+      "Bash(brew list gh 2>/dev/null || echo \"gh not installed via brew\"; which gh 2>/dev/null || echo \"gh not found in PATH\")",
+      "Bash(brew install gh)",
+      "Bash(which wrangler 2>/dev/null || npx wrangler --version 2>&1 | head -5)",
+      "Bash(claude mcp list 2>&1)",
+      "Bash(cat ~/.claude/projects/*/settings.json 2>/dev/null; echo \"===\"; ls ~/.claude/projects/ 2>/dev/null)",
+      "Bash(claude mcp list -j 2>&1 || echo \"no json output\")",
+      "Bash(claude mcp list 2>&1; echo \"EXIT: $?\")",
+      "Bash(claude mcp add -t http -s user github https://api.githubcopilot.com/mcp/ 2>&1)",
+      "Bash(claude mcp get github 2>&1)",
+      "Bash(claude mcp remove github 2>&1; claude mcp remove cloudflare 2>&1)",
+      "Bash(claude mcp add --help 2>&1)",
+      "Bash(claude mcp add cloudflare \"https://workers-mcp.cloudflare.com/mcp/sse\" -t http -s user 2>&1)",
+      "Bash(claude mcp add figma-desktop \"http://127.0.0.1:3845/mcp\" -t http -s user 2>&1)",
+      "mcp__figma-desktop__get_metadata",
+      "mcp__figma-desktop__get_screenshot",
+      "mcp__sanity__list_organizations",
+      "mcp__sanity__list_sanity_rules",
+      "mcp__figma-desktop__get_design_context",
+      "Bash(npx sv create . --template minimal --types ts --no-add-ons --no-install 2>&1)",
+      "Bash(npx sv@latest create . --template minimal --types ts --no-add-ons --no-install --force-write 2>&1)",
+      "Bash(npx sv@latest create . --template minimal --types ts --no-add-ons --no-install --no-dir-check 2>&1)",
+      "Bash(npm install -D @sveltejs/adapter-cloudflare wrangler 2>&1)",
+      "Bash(npm run build 2>&1)",
+      "Bash(npx sanity@latest schema deploy 2>&1)",
+      "mcp__sanity__deploy_schema",
+      "mcp__sanity__create_documents_from_json",
+      "mcp__sanity__publish_documents",
+      "mcp__sanity__patch_document_from_json",
+      "Bash(git init && git add -A && git status)"
+    ]
+  }
+}
